@@ -97,10 +97,29 @@
     </div>
   </section>
 
-
-
-
-
+<!-- Form per aggiungere un nuovo membro -->
+<section class="container my-5">
+  <h3 class="mb-4 text-center">Aggiungi un nuovo membro</h3>
+  <form id="addMemberForm">
+    <div class="mb-3">
+      <label for="memberName" class="form-label">Nome</label>
+      <input type="text" class="form-control" id="memberName" placeholder="es. Mario Rossi" required>
+    </div>
+    <div class="mb-3">
+      <label for="memberRole" class="form-label">Ruolo</label>
+      <input type="text" class="form-control" id="memberRole" placeholder="es. Developer" required>
+    </div>
+    <div class="mb-3">
+      <label for="memberEmail" class="form-label">Email</label>
+      <input type="email" class="form-control" id="memberEmail" placeholder="es. mario@gmail.com">
+    </div>
+    <div class="mb-3">
+      <label for="memberImage" class="form-label">URL Immagine</label>
+      <input type="url" class="form-control" id="memberImage" placeholder="es. https://.../foto.png">
+    </div>
+    <button type="submit" class="btn btn-primary">Aggiungi</button>
+  </form>
+</section>
 
     <script src="./js/script.js"></script>
 </body>
