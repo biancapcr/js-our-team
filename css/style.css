@@ -1,0 +1,65 @@
+/* Reset base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Corpo pagina */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+/* Sezione Team */
+section.container {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+/* Titolo */
+h2 {
+  font-family: 'Fredoka One', cursive;
+  font-weight: 700;
+  font-size: 40px;
+  color: #e83e8c;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+/* Paragrafo intro */
+section p .text-center {
+  max-width: 800px;
+  margin: 0 auto 30px;
+  font-size: 16px;
+  color: #495057;
+  line-height: 1.5;
+}
+
+/* Card layout */
+.d-flex.bg-dark {
+  background-color: #212529;
+}
+
+.d-flex h5 {
+  font-family: 'Fredoka One', cursive;
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.d-flex p {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.d-flex a.text-info {
+  font-size: 14px;
+  text-decoration: none;
+}
+
+/* Immagini */
+.d-flex img {
+  object-fit: cover;
+}
