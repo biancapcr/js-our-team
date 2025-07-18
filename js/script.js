@@ -34,5 +34,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const emailInput= document.getElementById('memberEmail');
   const imgInput  = document.getElementById('memberImage');
 
+
+   // Popolamento iniziale delle card con ciclo for
+  for (let i = 0; i < teamMembers.length; i++) {
+    container.innerHTML += createCard(teamMembers[i]);
+  }
+
 }
 );
