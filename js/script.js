@@ -1,11 +1,11 @@
 // Array iniziale dei membri del team
 const teamMembers = [
-  { name: "Marco Bianchi", role: "Designer",            email: "marcobianchi@team.com", img: "img/male1.png" },
-  { name: "Laura Rossi",   role: "Front-end Developer", email: "laurarossi@team.com",    img: "img/female1.png" },
-  { name: "Giorgio Verdi", role: "Back-end Developer",  email: "giorgioverdi@team.com",  img: "img/male2.png" },
-  { name: "Marta Ipsum",   role: "SEO Specialist",      email: "martarossi@team.com",    img: "img/female2.png" },
-  { name: "Roberto Lorem", role: "SEO Specialist",      email: "robertolorem@team.com",  img: "img/male3.png" },
-  { name: "Daniela Amet",  role: "Analyst",             email: "danielaamet@team.com",   img: "img/female2.png" }
+  { name: "Marco Bianchi", role: "Designer",            email: "marcobianchi@team.com", img: "assets/img/male1.png" },
+  { name: "Laura Rossi",   role: "Front-end Developer", email: "laurarossi@team.com",    img: "assets/img/female1.png" },
+  { name: "Giorgio Verdi", role: "Back-end Developer",  email: "giorgioverdi@team.com",  img: "assets/img/male2.png" },
+  { name: "Marta Ipsum",   role: "SEO Specialist",      email: "martarossi@team.com",    img: "assets/img/female2.png" },
+  { name: "Roberto Lorem", role: "SEO Specialist",      email: "robertolorem@team.com",  img: "assets/img/male3.png" },
+  { name: "Daniela Amet",  role: "Analyst",             email: "danielaamet@team.com",   img: "assets/img/female2.png" }
 ];
 
 // Markup HTML di una singola card
@@ -44,4 +44,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // inietto tutte le colonne/card in un unico innerHTML
   teamContainer.innerHTML = cards;
+
+  // BONUS
+
+  // Recupero il pulsante di aggiunta
+  const addMember = document.getElementById('add-member');
+
+  addMember.addEventListener('click', function(e) { 
+    // prevengo comportamento di default del form
+    e.preventDefault();
+     // Recupero i valori dai campi
+    const name  = document.getElementById('name').value;
+    const role  = document.getElementById('role').value;
+    const email = document.getElementById('email').value;
+    const img   = document.getElementById('img').value;
+
+    // Creo il nuovo oggetto membro
+    const newMember = { name, role, email, img };
+
+    // Lo aggiungo all'array
+    teamMembers.push(newMember);
+
+    // Inietto la sua card in pagina
+    teamContainer.innerHTML += createCard(newMember);
   });
+});
