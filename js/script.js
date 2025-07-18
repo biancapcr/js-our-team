@@ -49,18 +49,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Recupero il pulsante di aggiunta
   const addMember = document.getElementById('add-member');
+  addMember.addEventListener('click', e => {
+  e.preventDefault();
+  console.log('click ok');
 
-  addMember.addEventListener('click', function(e) { 
-    // prevengo comportamento di default del form
-    e.preventDefault();
      // Recupero i valori dai campi
-    const name  = document.getElementById('name').value;
-    const role  = document.getElementById('role').value;
-    const email = document.getElementById('email').value;
-    const img   = document.getElementById('img').value;
+     const name  = document.getElementById('memberName').value;
+     const role  = document.getElementById('memberRole').value;
+     const email = document.getElementById('memberEmail').value;
+     const img   = document.getElementById('memberImage').value;
+
 
     // Creo il nuovo oggetto membro
-    const newMember = { name, role, email, img };
+     const newMember = { name, role, email, img };
 
     // Lo aggiungo all'array
     teamMembers.push(newMember);
